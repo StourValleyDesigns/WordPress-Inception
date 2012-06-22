@@ -3,14 +3,14 @@
 // Load database info and local development parameters
 // ===================================================
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
-	define( 'WP_LOCAL_DEV', true );
+  define( 'WP_LOCAL_DEV', true );
 	include( dirname( __FILE__ ) . '/local-config.php' );
 } else {
-	define( 'WP_LOCAL_DEV', false );
-	define( 'DB_NAME', '%%DB_NAME%%' );
-	define( 'DB_USER', '%%DB_USER%%' );
-	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
-	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+  define( 'WP_LOCAL_DEV', false );
+  define( 'DB_NAME', '%%DB_NAME%%' );
+  define( 'DB_USER', '%%DB_USER%%' );
+  define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
+  define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
 }
 
 // ========================
@@ -79,5 +79,5 @@ define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' ); // Does magic in WP Stack t
 // Bootstrap WordPress
 // ===================
 if ( !defined( 'ABSPATH' ) )
-	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+  define( 'ABSPATH', dirname( __FILE__ ) . '/core/' );
 require_once( ABSPATH . 'wp-settings.php' );
